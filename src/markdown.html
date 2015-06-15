@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>SPSSINC GETURI DATA Extension Command</title>
+
+<link rel="stylesheet" type="text/css" href="extsyntax.css" />
+
+
+
+
+
+</head>
+
+<body>
+<h1>SPSSINC GETURI DATA Extension Command</h1>
+
+<p>Open an SPSS, Excel, SAS, or Stata dataset from a web url or download and save
+a file if type is OTHER.</p>
+<div class="syntax">
+<p>SPSSINC GETURI DATA URI=&ldquo;<em>uri including filename</em>&rdquo;<sup>&#42;</sup> &ldquo;&hellip;&rdquo;<br/>
+FILETYPE=SPSS<sup>&#42;&#42;</sup> or XLS or SAS or STATA or OTHER
+DATASET = <em>dataset</em><br/>
+SAVE=&ldquo;directory&rdquo;  </p>
+
+<p>/OPTIONS
+&ndash; options for Excel &ndash;<br/>
+ASSUMEDSTRWIDTH = <em>number</em><br/>
+SHEETNAME =&ldquo;<em>sheet name</em>&rdquo;<br/>
+SHEETNUMBER = <em>number</em><br/>
+CELLRANGE = &ldquo;<em>Excel range specification</em>&rdquo;<br/>
+READNAMES=YES<sup>&#42;&#42;</sup> or NO<br/>
+&ndash; options for SAS &ndash;<br/>
+DSET = &ldquo;<em>dataset</em>&rdquo;</p>
+
+<p>/HELP</p>
+
+<p><sup>&#42;</sup> Required<br/>
+<sup>&#42;&#42;</sup> Default</p>
+</div>
+<p>/HELP displays this help and does nothing else.</p>
+
+
+<pre class="example"><code>SPSSINC GETURI DATA
+URI=&quot;http://www2.census.gov/prod2/statcomp/usac/excel/Source.xls&quot;
+FILETYPE=XLS 
+/OPTIONS SHEETNUMBER=1 READNAMES=YES ASSUMEDSTRWIDTH=100.
+</code></pre>
+
+<p><strong>URI</strong> specifies the full web address including the protocol such as http:// or ftp://
+If the name is too long for an SPSS literal, write it as multiple quoted
+strings that are NOT joined with &ldquo;+&rdquo;.  For example,
+<code>URI=&quot;http://abc&quot; &quot;defghi/somefile.xls&quot;</code></p>
+
+<p><strong>FILETYPE</strong> specifies the type of file to read.</p>
+
+<p>You can optionally use <strong>DATASET</strong> to assign a dataset name to the opened file.</p>
+
+<p>If the filetype is OTHER, the <strong>SAVE</strong> keyword is required and specifies the directory
+for the download.  The file is not opened.  If a file with the same name exists in the download
+location, it may or may not be overwritten depending on the operating system.</p>
+
+<p>Options are specific to the file type and are ignored if they do not apply.
+For Excel, you can specify</p>
+
+<ul>
+<li>ASSUMEDSTRWIDTH - the width to use for string variables</li>
+<li>SHEETNAME - the name of the sheet to read</li>
+<li>SHEETNUMBER - the number of the sheet to read.
+You cannot specify both the name and the number.  The default is SHEETNUMBER=1</li>
+<li>CELLRANGE - the range to read within the sheet.  The default is to read the entire sheet.</li>
+<li>READNAMES - whether to read variable names from the first row of the range.  The default is YES.</li>
+</ul>
+
+<p>For SAS you can specify the dataset name within the uri with <strong>DSET</strong>.</p>
+
+<p>There are no options for SPSS or Stata files.</p>
+
+<p>&copy; Copyright IBM Corp. 1989, 2014</p>
+
+</body>
+
+</html>
+
