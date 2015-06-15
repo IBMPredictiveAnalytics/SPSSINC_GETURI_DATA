@@ -1,0 +1,67 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-05-21 17:51+China Standard Time\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: SPSSINC_GETURI_DATA.py:83
+msgid "An output file must be specified for type other."
+msgstr ""
+"タイプが「その他」の場合は、出力ファイルを指定する必要があります。"
+
+#: SPSSINC_GETURI_DATA.py:114
+msgid "The save location specified does not exist or is not a directory"
+msgstr ""
+"指定された保存場所は存在しないか、またはディレクトリではありません。"
+
+#: SPSSINC_GETURI_DATA.py:118
+msgid "The specified uri is not valid: %s"
+msgstr ""
+"指定された URI が無効です: %s"
+
+#: SPSSINC_GETURI_DATA.py:126
+msgid "Could not write to the specified destination: %s"
+msgstr ""
+"指定された宛先に書き込めませんでした: %s"
+
+#: SPSSINC_GETURI_DATA.py:130
+msgid ""
+"Cannot assign the original name.\n"
+"        The downloaded file is in %s and is named %s"
+msgstr ""
+"元の名前を割り当てることはできません。\n"
+"        ダウンロードされたファイルは %s にあり、%s という名前です"
+
+#: SPSSINC_GETURI_DATA.py:132
+msgid "The requested file, %s, has been saved in %s."
+msgstr ""
+"要求されたファイル %s は %s に保存されました。"
+
+
+
