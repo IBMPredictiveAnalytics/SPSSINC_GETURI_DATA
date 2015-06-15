@@ -1,0 +1,15 @@
+Name: SPSSINC GETURI DATA
+Dialog-Specs: SPSSINC_GETURI_DATA.spd
+Command-Specs: SPSSINC_GETURI_DATA.xml
+Code-Files: SPSSINC_GETURI_DATA.py
+Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Summary: Open an SPSS, Excel, SAS, or Stata dataset from a web url.
+Description: This command takes a URL as input and downloads and opens
+  a data file.  It can be used to download and save files of other typ
+ es, but these will not be opened.
+Author: JKP, IBM SPSS
+Version: 1.2.3
+Product-Version: 18
+Categories: data, utilities
+Plugins: Python
+Translation-Catalogues: lang
