@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Open a Data File from an Internet Address</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-family:Verdana, Arial, sans-serif;font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-family:Verdana, Arial, sans-serif;font-size:110%; }
+BODY {font-family:Verdana, Arial, sans-serif;font-size:80%; }
+TABLE {font-size:100%;font-family:Verdana, Arial, sans-serif;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph { font-family: Arial, Helvetica, sans-serif; }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;font-family:"courier new",monospace; }
+
+/* inline tags */
+.code {font-family: Courier,fixed pitch;}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {font-family: Symbol}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Open a Data File from an Internet Address</h1>
+Use this dialog box to open a data file in SPSS, Excel, SAS, or Stata format from the web.
+The file will be downloaded to your computer and then opened.  The dialog can also be used
+to download and save files of any other type, but these will not be opened.
+
+<p><span class="runinhead">Web Location and Data File Name.</span> 
+Enter the full Internet address of a file to open, including the protocol such as http:// or ftp://.
+The file will be downloaded to a temporary directory on your computer and opened.  Save it in
+a permanent location if you plan to use it again.
+<p><span class="runinhead">File Type.</span>
+Choose SPSS, Excel, SAS, or Stata as the file type.  The versions of these files that are supported
+correspond to the versions you can open from the standard File Open dialog box.  Choose
+Other to only download and save a file.
+<p><span class="runinhead">Save Folder.</span> If you select Other as the file type,
+specify an existing folder where the file should be stored.  The file name will
+be taken from the download uri.</p>
+<p class="bullet">• An existing file may or may not be overwritten
+depending on the operating system and file permissions.  If a file name
+collision occurs, the file may be left in the target folder under a temporary name.</p>
+<p><span class="runinhead">Dataset Name to Assign.</span>
+Optionally assign an SPSS dataset name to the file being opened.  This is not a file name but a name
+used to manage data files when more than one may be open.
+<p><span class="runinhead">Options for Excel Files.</span>
+These options apply only to Excel files and are ignored if another file type is used.  They correspond to the
+options available from the standard File Open dialog.
+<p><span class="runinhead">Sheet Number to Read.</span>
+If the file has more than one sheet, specify which one to read by number or name.  By default, sheet
+number 1 is read.  Do not specify both a name and a number.
+<p><span class="runinhead">Sheet Name to Read.</span>
+You can specify the sheet to read by entering the name here.  If both a name and number are given.
+the name takes priority.
+<p><span class="runinhead">Cell Range.</span> By default, all cells are read.  You can specify
+a cell range to limit the area read.
+<p><span class="runinhead">Read variable names from first row.</span>
+Check this box to take the variable names for the SPSS dataset from the first row of the range.
+Names that are invalid as SPSS names will be automatically replaced.
+<p><span class="runinhead">Assumed maximum string width.</span>
+By default strings are assigned a width of 32767.  You can specify a smaller number here.
+
+<p><span class="runinhead">Options for SAS Files.</span>
+You can enter the name of a specific SAS dataset within the file to read.
+
+<h2>Additional Features</h2>
+Run the command<br>
+SPSSINC GETURI DATA /HELP.<br>
+to display the entire syntax description.
+<h2>Requirements</h2>
+This command requires the Python Essentials.
+You can download these via the SPSS Community website at www.ibm.com/developerworks/spssdevcentral
+or from your installation materials.  The Essentials are automatically installed
+with Statistics 22 or later.</p>
+  <p style="font-family:Verdana, Arial, sans-serif;font-size:80%;">
+  © Copyright IBM Corp. 2013</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+SPSSINC GETURI DATA Extension Command
+=====================================
+
+Open an SPSS, Excel, SAS, or Stata dataset from a web url or download and save
+a file if type is OTHER.
+
+SPSSINC GETURI DATA URI="*uri including filename*"^&#42; "..."  
+FILETYPE=SPSS^&#42;&#42; or XLS or SAS or STATA or OTHER
+DATASET = *dataset*  
+SAVE="directory"  
+
+/OPTIONS
+-- options for Excel --  
+ASSUMEDSTRWIDTH = *number*  
+SHEETNAME ="*sheet name*"  
+SHEETNUMBER = *number*  
+CELLRANGE = "*Excel range specification*"  
+READNAMES=YES^&#42;&#42; or NO  
+-- options for SAS --  
+DSET = "*dataset*"
+
+/HELP
+
+^&#42; Required  
+^&#42;&#42; Default
+
+/HELP displays this help and does nothing else.
+
+
+
+Example:
+```
+SPSSINC GETURI DATA
+URI="http://www2.census.gov/prod2/statcomp/usac/excel/Source.xls"
+FILETYPE=XLS 
+/OPTIONS SHEETNUMBER=1 READNAMES=YES ASSUMEDSTRWIDTH=100.
+```
+
+**URI** specifies the full web address including the protocol such as http:// or ftp://
+If the name is too long for an SPSS literal, write it as multiple quoted
+strings that are NOT joined with "+".  For example,
+```URI="http://abc" "defghi/somefile.xls"```
+
+**FILETYPE** specifies the type of file to read.
+
+You can optionally use **DATASET** to assign a dataset name to the opened file.
+
+If the filetype is OTHER, the **SAVE** keyword is required and specifies the directory
+for the download.  The file is not opened.  If a file with the same name exists in the download
+location, it may or may not be overwritten depending on the operating system.
+
+Options are specific to the file type and are ignored if they do not apply.
+For Excel, you can specify
+* ASSUMEDSTRWIDTH - the width to use for string variables
+* SHEETNAME - the name of the sheet to read
+* SHEETNUMBER - the number of the sheet to read.
+You cannot specify both the name and the number.  The default is SHEETNUMBER=1
+* CELLRANGE - the range to read within the sheet.  The default is to read the entire sheet.
+* READNAMES - whether to read variable names from the first row of the range.  The default is YES.
+
+For SAS you can specify the dataset name within the uri with **DSET**.
+
+There are no options for SPSS or Stata files.
+
+(C) Copyright IBM Corp. 1989, 2014
