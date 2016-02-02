@@ -1,11 +1,13 @@
 # SPSSINC GETURI DATA
 ## Open an SPSS, Excel, SAS, or Stata dataset from a web url.
- This command takes a URL as input and downloads and opens   a data file.  It can be used to download and save files of other typ  es, but these will not be opened.
+ This command takes a URL as input and downloads and opens a data file.  It can be used to download and save files of other typ  es, but these will not be opened.
 
 ---
 Requirements
 ----
-- IBM SPSS Statistics 18 or later
+- IBM SPSS Statistics 18 or later and the corresponding IBM SPSS Statistics-Integration Plug-in for Python.
+
+Note: For users with IBM SPSS Statistics version 23 or higher, the SPSSINC GETURI DATA extension is installed as part of IBM SPSS Statistics-Essentials for Python.
 
 ---
 Installation intructions
