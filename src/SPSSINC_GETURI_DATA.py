@@ -1,10 +1,10 @@
-from __future__ import with_statement
+
 #/***********************************************************************
 # * Licensed Materials - Property of IBM 
 # *
 # * IBM SPSS Products: Statistics Common
 # *
-# * (C) Copyright IBM Corp. 1989, 2014
+# * (C) Copyright IBM Corp. 1989, 2020
 # *
 # * US Government Users Restricted Rights - Use, duplication or disclosure
 # * restricted by GSA ADP Schedule Contract with IBM Corp. 
@@ -64,7 +64,7 @@ There are no options for SPSS or Stata files.
 """
 import spss, spssaux
 from extension import Template, Syntax, processcmd
-import urllib, os, shutil
+import urllib.request, urllib.parse, urllib.error, os, shutil
         
 def geturidata(uri, filetype="sav", save=None, dataset=None, assumedstrwidth=32767, sheetname=None,
     sheetnumber=None, cellrange=None, readnames="ON", dset=None):
@@ -99,7 +99,7 @@ def geturidata(uri, filetype="sav", save=None, dataset=None, assumedstrwidth=327
         if dset:
             kwargs["dset"] = dset
         if sheetname and sheetnumber:
-            print "Warning: both sheet name and sheet number specified.  Using the name"
+            print("Warning: both sheet name and sheet number specified.  Using the name")
         if sheetname:    # if both present, use the name
             kwargs["sheet"] = "name"
             kwargs["sheetid"] = sheetname
@@ -121,10 +121,10 @@ def getfile(uri, saveloc):
     if not os.path.isdir(saveloc):
         raise ValueError(_("""The save location specified does not exist or is not a directory"""))
     try:
-        localfilename, headers = urllib.urlretrieve(uri)
+        localfilename, headers = urllib.request.urlretrieve(uri)
     except:
         raise ValueError(_("""The specified uri is not valid: %s""") % uri)
-    unqname = urllib.unquote_plus(uri)
+    unqname = urllib.parse.unquote_plus(uri)
     truefilename = os.path.split(unqname)[-1]
     localdir = "".join(os.path.split(localfilename)[:-1])
     newname = localdir + "/" + truefilename
@@ -137,12 +137,12 @@ def getfile(uri, saveloc):
     except:
         raise ValueError(_("""Cannot assign the original name.
         The downloaded file is in %s and is named %s""") % (saveloc, os.path.basename(localfilename)))
-    print _("""The requested file, %s, has been saved in %s.""") % (truefilename, saveloc)
+    print(_("""The requested file, %s, has been saved in %s.""") % (truefilename, saveloc))
  
 def Run(args):
     """Execute the SPSSINC GETURI DATA extension command"""
 
-    args = args[args.keys()[0]]
+    args = args[list(args.keys())[0]]
     ###print args   #debug
 
     oobj = Syntax([
@@ -160,7 +160,7 @@ def Run(args):
         Template("HELP", subc="", ktype="bool")])
     
     # A HELP subcommand overrides all else
-    if args.has_key("HELP"):
+    if "HELP" in args:
         #print helptext
         helper()
     else:
@@ -180,7 +180,7 @@ def helper():
     # webbrowser.open seems not to work well
     browser = webbrowser.get()
     if not browser.open_new(helpspec):
-        print("Help file not found:" + helpspec)
+        print(("Help file not found:" + helpspec))
 try:    #override
     from extension import helper
 except:
