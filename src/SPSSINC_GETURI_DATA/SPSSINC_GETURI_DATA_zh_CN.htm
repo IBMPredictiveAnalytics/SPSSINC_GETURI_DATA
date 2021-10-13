@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>从因特网地址打开数据文件</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>从因特网地址打开数据文件</h1>
+使用此对话框可以从 Web 打开 SPSS、Excel、SAS 或 Stata 格式的数据文件。该文件将下载到您的计算机，然后打开。此对话框也可用于下载并保存任何其他类型的文件，但不会打开这些文件。
+
+<p><span class="runinhead">Web 位置和数据文件名。</span>请输入要打开的文件的完整因特网地址，包括
+http:// 或 ftp:// 之类的协议。此文件将下载到您的计算机上的临时目录并打开。如果您计划再次使用此文件，请将其保存到永久位置。
+<p><span class="runinhead">文件类型。</span>请选择 SPSS、Excel、SAS 或 Stata
+作为文件类型。对于这些文件，支持的版本对应于可以从标准的“打开文件”对话框中打开的版本。选择“其他”将仅下载并保存文件。
+<p><span class="runinhead">保存文件夹。</span>如果选择了“其他”作为文件类型，请指定应该用于存储文件的现有文件夹。文件名将从下载 URI 中获取。</p>
+<p class="bullet">根据操作系统和文件许可权不同，可能可以也可能无法覆盖现有文件。如果发生文件名冲突，那么该文件可能会留在目标文件夹中，并具有临时名称。</p>
+<p><span class="runinhead">要指定的数据集名称。</span>（可选）对要打开的文件指定 SPSS 数据集名称。这不是文件名，而是在打开了多个数据文件时用于管理这些数据文件的名称。
+<p><span class="runinhead">Excel 文件选项。</span>这些选项仅应用于 Excel
+文件，在使用其他文件类型时将被忽略。它们对应于标准“打开文件”对话框中提供的选项。
+<p><span class="runinhead">要读取的工作表编号。</span>如果文件包含多个工作表，请按编号或名称指定要读取的工作表。缺省情况下，将读取编号为 1 的工作表。请勿同时指定名称和编号。
+<p><span class="runinhead">要读取的工作表名称。</span>您可以通过在此处输入名称来指定要读取的工作表。如果同时指定了名称和编号，那么名称优先。
+<p><span class="runinhead">单元格范围。</span>缺省情况下，将读取所有单元格。您可以指定单元格范围以限制读取区域。
+<p><span class="runinhead">从第一行读取变量名称。</span>如果选中此框，那么将从范围中的第一行读取
+SPSS 数据集的变量名称。无法用作 SPSS 名称的名称将被自动替换。
+<p><span class="runinhead">假定最大字符串宽度。</span>缺省情况下，对字符串指定的宽度为 32767。您可以在此处指定较小的数字。
+<p><span class="runinhead">SAS 文件选项。</span>您可以输入此文件中要读取的特定 SAS 数据集的名称。
+<h2>其他功能部件</h2>
+运行命令<br>
+SPSSINC GETURI DATA /HELP。<br>
+可以显示整个语法描述。<h2>要求</h2>
+此命令需要 Python Essentials。您可以通过 SPSS Community
+Web 站点 (www.ibm.com/developerworks/spssdevcentral) 下载或通过安装材料获取。Essentials 随 Statistics 22 或更高版本一起自动安装。</p>
+  <p style="font-size:80%;">
+  Copyright IBM Corp. 2013</p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>インターネット アドレスからデータ ファイルを開く</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>インターネット アドレスからデータ ファイルを開く</h1>
+このダイアログ ボックスを使用して、SPSS、Excel、SAS、または Stata 形式のデータ ファイルを Web から開きます。
+ファイルは、ご使用のコンピュータにダウンロードされてから、開きます。このダイアログは、他のタイプのファイルをダウンロードして保存する場合にも使用できますが、それらのファイルは開きません。
+<p><span class="runinhead">Web ロケーションおよびデータ ファイル名。</span>
+開くファイルの完全なインターネット アドレスを入力します (http:// や ftp:// などのプロトコルを含みます)。
+ファイルは、ご使用のコンピュータ上の一時ディレクトリにダウンロードされ、開きます。ファイルを再使用する予定の場合は、永続的な場所に保存してください。
+<p><span class="runinhead">ファイル タイプ。</span>
+ファイル タイプとして「SPSS」、「Excel」、「SAS」、または「Stata」を選択します。これらのファイルでサポートされるバージョンは、標準の「ファイル」>「開く」ダイアログ ボックスから開くことができるバージョンに対応します。ファイルのダウンロードと保存のみを行う場合は、「その他」を選択してください。
+<p><span class="runinhead">フォルダの保存。</span>ファイル タイプとして「その他」を選択した場合は、ファイルが保管される既存のフォルダを指定します。ファイル名は、ダウンロード URI から取得されます。</p>
+<p class="bullet">既存のファイルが上書きされるかどうかは、オペレーティング システムやファイル許可によって異なります。ファイル名の衝突が発生した場合、ファイルはターゲット フォルダ内に一時的な名前で残される可能性があります。</p>
+<p><span class="runinhead">割り当てるデータセット名。</span>
+必要に応じて、開く予定のファイルに SPSS データセット名を割り当てます。これは、ファイル名ではなく、複数のファイルが開いているときにデータ ファイルを管理するのに使用される名前です。
+<p><span class="runinhead">Excel ファイルのオプション。</span>
+これらのオプションは Excel ファイルにのみ適用され、他のファイル タイプを使用する場合は無視されます。これらは、標準の「ファイル」>「開く」ダイアログから使用できるオプションに対応します。
+<p><span class="runinhead">読み取るシート番号。</span>
+ファイルに複数のシートがある場合は、読み取るシートを番号または名前で指定します。デフォルトでは、シート番号 1 が読み取られます。名前と番号の両方を指定しないでください。
+<p><span class="runinhead">読み取るシート名。</span>
+読み取るシートを指定するには、ここに名前を入力します。名前と番号の両方が指定された場合は、名前が優先されます。
+<p><span class="runinhead">セル範囲。</span>デフォルトでは、すべてのセルが読み取られます。セル範囲を指定すると、読み取る領域を制限できます。
+<p><span class="runinhead">最初の行から変数名を読み取る。</span>
+このボックスにチェック マークを付けると、この範囲の最初の行から SPSS データセットの変数名が取得されます。
+SPSS 名として無効な名前は、自動的に置き換えられます。
+<p><span class="runinhead">想定される最大ストリング幅。</span>
+デフォルトでは、ストリングには幅 32767 が割り当てられます。それよりも小さい数値をここで指定できます。
+<p><span class="runinhead">SAS ファイルのオプション。</span>
+読み取るファイル内の特定 SAS データセットの名前を入力できます。
+
+<h2>その他の機能</h2>
+次のコマンドを実行します。<br>
+SPSSINC GETURI DATA /HELP.<br>
+シンタックス全体の説明が表示されます。<h2>要件</h2>
+このコマンドには Python Essentials が必要です。
+これらは、SPSS Community Web サイト (www.ibm.com/developerworks/spssdevcentral) またはインストール素材からダウンロードできます。Essentials は、Statistics 22 以降のバージョンと共に自動的にインストールされます。</p>
+  <p style="font-size:80%;">
+  Copyright IBM Corp. 2013</p>
+</body>
+</html>

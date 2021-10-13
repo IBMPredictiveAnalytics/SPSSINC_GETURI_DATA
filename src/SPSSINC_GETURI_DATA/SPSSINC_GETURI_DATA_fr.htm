@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+<title>Ouverture d'un fichier de données à partir d'une adresse Internet</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Ouverture d'un fichier de données à partir d'une adresse Internet</h1>
+Cette boîte de dialogue permet d'ouvrir un fichier de données SPSS, Excel, SAS ou Stata à partir du Web.
+Le fichier est téléchargé sur votre ordinateur, puis il est ouvert.  Vous pouvez également utiliser cette boîte de dialogue pour télécharger et enregistrer des fichiers d'un type différent, mais ceux-ci ne seront pas ouverts.
+
+<p><span class="runinhead">Emplacement Web et nom de fichier de données :</span> 
+Entrez l'adresse complète du fichier à ouvrir, sans oublier le protocole http:// ou ftp://.
+Le fichier est téléchargé vers un répertoire temporaire de votre ordinateur, puis il est ouvert.  Enregistrez-le dans un emplacement permanent si vous prévoyez de l'utiliser ultérieurement.
+<p><span class="runinhead">Type de fichier :</span>
+Choisissez un type de fichier SPSS, Excel, SAS ou Stata.  Les versions prises en charge correspondent à celles à partir desquelles vous pouvez ouvrir les fichiers dans la boîte de dialogue standard Fichier - Ouvrir.  Choisissez le type Autre pour télécharger et enregistrer un fichier uniquement.
+<p><span class="runinhead">Dossier d'enregistrement :</span> Si vous choisissez le type de fichier Autre, vous devez définir le dossier existant dans lequel stocker le fichier.  Le nom de fichier est établi à partir de l'URI de téléchargement.</p>
+<p class="bullet">Un fichier existant peut être écrasé ou non en fonction du système d'exploitation et des droits d'accès au fichier.  Si une collision de nom est détectée, il se peut que le fichier reste dans le dossier cible avec un nom temporaire.</p>
+<p><span class="runinhead">Nom de fichier à attribuer :</span>
+Si vous le souhaitez, vous pouvez affecter un nom de fichier SPSS au fichier ouvert.  Il ne s'agit pas du nom du fichier, mais du nom servant à gérer les fichiers de données lorsque plusieurs fichiers sont ouverts.
+<p><span class="runinhead">Options des fichiers Excel :</span>
+Ces options s'appliquent uniquement aux fichiers Excel et sont ignorées lorsqu'un autre type de fichier est utilisé.  Elles correspondent aux options disponibles dans la boîte de dialogue standard d'ouverture de fichier.
+<p><span class="runinhead">Numéro de feuille à lire :</span>
+Si le fichier comporte plusieurs feuilles, indiquez le numéro ou le nom de la feuille que vous voulez lire.  Par défaut, le numéro de feuille 1 est lu.  Indiquez le nom ou le numéro de la feuille.
+<p><span class="runinhead">Nom de feuille à lire :</span>
+Vous pouvez indiquer la feuille que vous voulez lire en entrant ici son nom.  Si un nom et un numéro sont définis,
+le nom est prioritaire.
+<p><span class="runinhead">Plage de cellules :</span> Par défaut, toutes les cellules sont lues.  Vous pouvez choisir d'indiquer une plage de cellules afin de limiter la zone de lecture.
+<p><span class="runinhead">Lire les noms de variable à partir de la première ligne :</span>
+Cochez cette case pour lire les noms de variable du jeu de données SPSS à partir de la première ligne de la plage.
+Les noms qui ne sont pas valides en tant que noms SPSS sont automatiquement remplacés.
+<p><span class="runinhead">Largeur de chaîne maximale prise en compte :</span>
+Par défaut, les chaînes ont une largeur de 32 767.  Vous pouvez indiquer une valeur inférieure ici.
+
+<p><span class="runinhead">Options des fichiers SAS :</span>
+Vous pouvez entrer le nom d'un jeu de données SAS spécifique dans le fichier à lire.
+
+<h2>Fonctions supplémentaires</h2>
+Exécutez la commande<br>
+SPSSINC GETURI DATA /HELP.<br>
+pour afficher la description intégrale de la syntaxe.
+<h2>Conditions requises</h2>
+Cette commande requiert Python Essentials.
+Vous pouvez le télécharger depuis le site Web de la communauté SPSS à l'adresse www.ibm.com/developerworks/spssdevcentral ou à partir de vos supports d'installation.  Essentials est automatiquement installé avec Statistics 22 ou version ultérieure.</p>
+  <p style="font-size:80%;">
+  Copyright IBM Corp. 2013</p>
+</body>
+</html>

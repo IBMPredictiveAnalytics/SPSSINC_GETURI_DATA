@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>從網際網路位址開啟資料檔</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>從網際網路位址開啟資料檔</h1>
+使用此對話框從 Web 開啟 SPSS、Excel、SAS 或 Stata 格式的資料檔。
+此檔案會下載至您的電腦，然後開啟。此對話框也可以用於下載及儲存任何其他類型的檔案，但不會開啟這些檔案。
+<p><span class="runinhead">Web 位置及資料檔名。</span>
+輸入要開啟的檔案的完整網際網路位址，包括通訊協定，如 http:// 或 ftp://。
+此檔案會下載至您電腦上的暫存目錄並開啟。如果您計劃再次使用它，請將它儲存在永久位置。
+<p><span class="runinhead">檔案類型。</span>
+選擇 SPSS、Excel、SAS 或 Stata 作為檔案類型。支援的這些檔案版本對應於您可以從標準「開啟檔案」對話框開啟的版本。選擇「其他」，以僅下載並儲存檔案。
+<p><span class="runinhead">儲存資料夾。</span> 如果選取「其他」作為檔案類型，請指定應在其中儲存檔案的現有資料夾。將從下載 URI 取得檔名。</p>
+<p class="bullet">視作業系統及檔案權限而定，可能會，也可能不會改寫現有檔案。如果檔名發生衝突，檔案可能會以暫存名稱保留在目標資料夾中。</p>
+<p><span class="runinhead">要指派的資料集名稱。</span>
+選擇性地將 SPSS 資料集名稱指派給要開啟的檔案。這不是檔名，而是在可能開啟多個資料檔時用於管理資料檔的名稱。
+<p><span class="runinhead">用於 Excel 檔案的選項。</span>
+這些選項僅適用於 Excel 檔案，使用其他檔案類型時，會忽略這些選項。它們對應於標準「開啟檔案」對話框中可用的選項。
+<p><span class="runinhead">要讀取的工作表號碼。</span>
+如果檔案具有多個工作表，請依號碼或名稱指定要讀取的工作表。依預設，會讀取 1 號工作表。請勿同時指定名稱和號碼。
+<p><span class="runinhead">要讀取的工作表名稱。</span>
+您可以在這裡輸入名稱，以指定要讀取的工作表。如果同時提供名稱和號碼，則名稱優先。
+<p><span class="runinhead">資料格範圍。</span> 依預設，會讀取所有資料格。您可以指定資料格範圍，以限制讀取的區域。
+<p><span class="runinhead">從第一列讀取變數名稱。</span>
+勾選此方框，以便從範圍的第一列取得 SPSS 資料集的變數名稱。
+系統將會自動取代無效的 SPSS 名稱。
+<p><span class="runinhead">採用的字串寬度上限。</span>
+依預設，為字串指派的寬度是 32767。您可以在這裡指定更小的數字。
+<p><span class="runinhead">用於 SAS 檔案的選項。</span>
+您可以輸入要讀取的檔案內的特定 SAS 資料集名稱。
+<h2>其他特性</h2>
+執行指令<br>
+SPSSINC GETURI DATA /HELP.<br>
+以顯示整個語法說明。<h2>需求</h2>
+此指令需要 Python Essentials。您可以從 SPSS 社群網站 (www.ibm.com/developerworks/spssdevcentral) 或安裝資料中下載它們。Essentials 會自動隨 Statistics 22 或更新版本一起安裝。</p>
+  <p style="font-size:80%;">
+  Copyright IBM Corp. 2013</p>
+</body>
+</html>
