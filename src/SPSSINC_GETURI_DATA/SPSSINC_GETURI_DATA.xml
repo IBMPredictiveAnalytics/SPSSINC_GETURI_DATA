@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extension debug="false" version="1.0" xmlns="http://spss.com/clementine/extensions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://spss.com/clementine/extensions http://xml.spss.com/clementine/extensions/CLEFSpecificationFile.xsd">
+	<ExtensionDetails copyright="Licensed Materials - Property of IBM.  IBM SPSS Products: Statistics Common (C) Copyright IBM Corp. 1989, 2013.  US Government Users Restricted Rights - Use, duplication or  disclosure restricted by GSA ADP Schedule Contract with IBM Corp." description="" id="SPSSINC_GETURI_DATA" label="" provider="SPSS, Inc." providerTag="spss" version="1.0"/>
+	<Resources>
+		<Bundle id="bundle1" path="SPSSINC_GETURI_DATA" type="properties"/>
+	</Resources>
+	<CommonObjects>
+		<Actions>
+			<Action id="SPSSINC_GETURI_DATA_action" imagePath="IBMdialogicon.png" label="Internet Data" labelKey="SPSSINC_GETURI_DATA_action.LABEL"/>
+		</Actions>
+	</CommonObjects>
+	<UserInterface>
+		<Controls>
+			<MenuItem action="SPSSINC_GETURI_DATA_action" offset="1" showIcon="true" spssMenu="File.file_open"/>
+		</Controls>
+	</UserInterface>
+	<Node id="SPSSINC_GETURI_DATA" label="Open Data File from Internet Location" labelKey="SPSSINC_GETURI_DATA.LABEL" type="modelBuilder">
+		<Properties>
+			<Property name="SPSSINC_GETURI_DATA" syntax="SPSSINC GETURI DATA&#10;%%uri%%&#10;%%filetype%% %%datasetname%% %%savespec%%&#10;/OPTIONS&#10;%%exceloptions%%&#10;%%Sasoptions%%"/>
+			<Property description="false" name="SPSSINC_GETURI_DATA_modal"/>
+			<Property defaultValue="" description="Enter the url, including the file name" descriptionKey="uri_tooltip.LABEL" isRequired="true" label="Web Location and Data File Name:" labelKey="uri.LABEL" name="uri" syntax="URI=&quot;%%ThisValue%%&quot;" valueType="string"/>
+			<Property defaultValue="spss" description="" descriptionKey="filetype_tooltip.LABEL" label="File Type" labelKey="filetype.LABEL" name="filetype" syntax="FILETYPE=%%ThisValue%%" valueType="enum">
+				<Enumeration>
+					<Enum description="sav files" descriptionKey="spss_tooltip.LABEL" hasSubGroup="false" label="SPSS" labelKey="spss.LABEL" mnemonic="S" mnemonicKey="spss_mnemonic.VALUE" syntax="SAV" value="spss"/>
+					<Enum description="xls, xlsm, xls, or xlsx" descriptionKey="Excel_tooltip.LABEL" hasSubGroup="false" label="Excel" labelKey="Excel.LABEL" mnemonic="E" mnemonicKey="Excel_mnemonic.VALUE" syntax="XLS" value="Excel"/>
+					<Enum description="" descriptionKey="SAS_tooltip.LABEL" hasSubGroup="false" label="SAS" labelKey="SAS.LABEL" mnemonic="A" mnemonicKey="SAS_mnemonic.VALUE" syntax="SAS" value="SAS"/>
+					<Enum description="" descriptionKey="Stata_tooltip.LABEL" hasSubGroup="false" label="Stata" labelKey="Stata.LABEL" mnemonic="T" mnemonicKey="Stata_mnemonic.VALUE" syntax="STATA" value="Stata"/>
+					<Enum description="" descriptionKey="Other_tooltip.LABEL" hasSubGroup="true" label="Other" labelKey="Other.LABEL" mnemonic="O" mnemonicKey="Other_mnemonic.VALUE" syntax="OTHER" value="Other"/>
+				</Enumeration>
+			</Property>
+			<Property defaultValue="" description="specifies the directory for the item.  A file with the download name should not already exist in that location." descriptionKey="savespec_tooltip.LABEL" isRequired="true" label="Save Folder::" labelKey="savespec.LABEL" name="savespec" savespec_filter="All File Types (*.*)|*.*|A^" syntax="SAVE=%%ThisValue%%" valueType="string"/>
+			<Property description="" descriptionKey="exceloptions_tooltip.LABEL" label="Options for Excel Files" labelKey="exceloptions.LABEL" name="exceloptions" syntax="%%ThisValue%%"/>
+			<Property defaultValue="1" description="You can choose either a sheet name or a sheet number" descriptionKey="sheetnumber_tooltip.LABEL" label="Sheet Number to Read:" labelKey="sheetnumber.LABEL" max="31" min="1" name="sheetnumber" syntax="SHEETNUMBER=%%ThisValue%%" valueType="integer"/>
+			<Property defaultValue="" description="You can specify either a number or a name but not both" descriptionKey="sheetname_tooltip.LABEL" label="Sheet Name to Read:" labelKey="sheetname.LABEL" name="sheetname" syntax="SHEETNAME=&quot;%%ThisValue%%&quot;" valueType="string"/>
+			<Property defaultValue="" description="Leave blank to read the entire sheet" descriptionKey="cellrange_tooltip.LABEL" label="Cell Range" labelKey="cellrange.LABEL" name="cellrange" syntax="CELLRANGE=&quot;%%ThisValue%%&quot;" valueType="string"/>
+			<Property defaultValue="true" description="" descriptionKey="readnames_tooltip.LABEL" label="Read variable names from first row" labelKey="readnames.LABEL" name="readnames" syntax="READNAMES=YES±READNAMES=NO" valueType="boolean"/>
+			<Property defaultValue="32767" description="" descriptionKey="assumedstrwidth_tooltip.LABEL" label="Assumed Maximum String Width:" labelKey="assumedstrwidth.LABEL" max="32767" min="1" name="assumedstrwidth" syntax="ASSUMEDSTRWIDTH=%%ThisValue%%" valueType="integer"/>
+			<Property defaultValue="" description="Optional SPSS dataset name" descriptionKey="datasetname_tooltip.LABEL" label="Dataset Name to Assign" labelKey="datasetname.LABEL" name="datasetname" syntax="DATASET=%%ThisValue%%" valueType="fieldName"/>
+			<Property description="" descriptionKey="Sasoptions_tooltip.LABEL" label="Options for SAS Files" labelKey="Sasoptions.LABEL" name="Sasoptions" syntax="%%ThisValue%%"/>
+			<Property defaultValue="" description="" descriptionKey="dset_tooltip.LABEL" label="Dataset to Read:" labelKey="dset.LABEL" name="dset" syntax="DSET=&quot;%%ThisValue%%&quot;" valueType="string"/>
+		</Properties>
+		<UserInterface>
+			<Tabs>
+				<Tab helpLink="SPSSINC_GETURI_DATA.htm">
+					<PropertiesPanel>
+						<TextBoxControl mnemonic="F" mnemonicKey="uri_mnemonic.VALUE" property="uri">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<RadioButtonGroupControl property="filetype" rows="5" useSubPanel="false">
+							<Layout columnWeight="1.0" fill="both" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="1.0"/>
+							<RadioButton property="spss"/>
+							<RadioButton property="Excel"/>
+							<RadioButton property="SAS"/>
+							<RadioButton property="Stata"/>
+							<RadioButton property="Other">
+								<StaticText text="File will be downloaded but  not opened" textKey="item_26.LABEL">
+									<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="0" gridWidth="1" leftIndent="16" rowWeight="0.0"/>
+								</StaticText>
+								<ServerDirectoryChooserControl mnemonic="O" mnemonicKey="savespec_mnemonic.VALUE" mode="save" property="savespec">
+									<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" leftIndent="16" rowWeight="1.0"/>
+								</ServerDirectoryChooserControl>
+							</RadioButton>
+						</RadioButtonGroupControl>
+						<PropertiesPanel id="exceloptions" label="Options for Excel Files" labelKey="exceloptions.LABEL">
+							<Layout columnWeight="1.0" fill="both" gridColumn="1" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+							<TextBoxControl mnemonic="N" mnemonicKey="sheetnumber_mnemonic.VALUE" property="sheetnumber">
+								<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="0.0"/>
+							</TextBoxControl>
+							<TextBoxControl mnemonic="R" mnemonicKey="sheetname_mnemonic.VALUE" property="sheetname">
+								<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="1" gridWidth="1" rowWeight="0.0"/>
+							</TextBoxControl>
+							<TextBoxControl mnemonic="C" mnemonicKey="cellrange_mnemonic.VALUE" property="cellrange">
+								<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+							</TextBoxControl>
+							<CheckBoxControl mnemonic="M" mnemonicKey="readnames_mnemonic.VALUE" property="readnames">
+								<Layout columnWeight="1.0" fill="none" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="0.0"/>
+							</CheckBoxControl>
+							<TextBoxControl mnemonic="A" mnemonicKey="assumedstrwidth_mnemonic.VALUE" property="assumedstrwidth">
+								<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="4" gridWidth="1" rowWeight="1.0"/>
+							</TextBoxControl>
+						</PropertiesPanel>
+						<TextBoxControl mnemonic="D" mnemonicKey="datasetname_mnemonic.VALUE" property="datasetname">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="2" gridWidth="1" rowWeight="0.0"/>
+						</TextBoxControl>
+						<PropertiesPanel id="Sasoptions" label="Options for SAS Files" labelKey="Sasoptions.LABEL">
+							<Layout columnWeight="1.0" fill="both" gridColumn="1" gridRow="1" gridWidth="1" rowWeight="1.0"/>
+							<TextBoxControl property="dset">
+								<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="0" gridWidth="1" rowWeight="1.0"/>
+							</TextBoxControl>
+						</PropertiesPanel>
+						<StaticText text="This dialog was created using a later version of PASW Statistics\nand certain features may not function as intended." textKey="v17_warning.LABEL">
+							<Layout columnWeight="1.0" fill="horizontal" gridColumn="0" gridRow="3" gridWidth="1" rowWeight="1.0"/>
+						</StaticText>
+					</PropertiesPanel>
+				</Tab>
+			</Tabs>
+		</UserInterface>
+	</Node>
+</Extension>

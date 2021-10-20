@@ -1,67 +1,41 @@
-#/***********************************************************************
-# * Licensed Materials - Property of IBM 
-# *
-# * IBM SPSS Products: Statistics Common
-# *
-# * (C) Copyright IBM Corp. 1989, 2014
-# *
-# * US Government Users Restricted Rights - Use, duplication or disclosure
-# * restricted by GSA ADP Schedule Contract with IBM Corp. 
-# ************************************************************************/
-
-# NLS_ENCODING=UTF-8
-# IBMUPYTH
-
-
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR ORGANIZATION
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
+
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-05-21 17:51+China Standard Time\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-10-11 00:52-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: ENCODING\n"
-"Generated-By: pygettext.py 1.5\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Globalization Pipeline\n"
 
-
-#: SPSSINC_GETURI_DATA.py:83
 msgid "An output file must be specified for type other."
-msgstr ""
-"Для типа Другой должен быть указан файл вывода."
+msgstr "Для типа Другой должен быть указан файл вывода."
 
-#: SPSSINC_GETURI_DATA.py:114
 msgid "The save location specified does not exist or is not a directory"
 msgstr ""
 "Заданное положение сохранения не существует или находится в другом каталоге"
 
-#: SPSSINC_GETURI_DATA.py:118
 msgid "The specified uri is not valid: %s"
-msgstr ""
-"Указан недопустимый URI: %s"
+msgstr "Указан недопустимый URI: %s"
 
-#: SPSSINC_GETURI_DATA.py:126
 msgid "Could not write to the specified destination: %s"
-msgstr ""
-"Не удалось произвести запись в заданное положение назначения: %s"
+msgstr "Не удалось произвести запись в заданное положение назначения: %s"
 
-#: SPSSINC_GETURI_DATA.py:130
 msgid ""
-"Cannot assign the original name.\n"
-"        The downloaded file is in %s and is named %s"
+"Cannot assign the original name.\n        The downloaded file is in %s and is "
+"named %s"
 msgstr ""
-"Не удается назначить исходное имя.\n"
-"        Скачанный файл находится в %s и его имя %s"
+"Не удается назначить исходное имя.\n        Скачанный файл находится в %s и "
+"его имя %s"
 
-#: SPSSINC_GETURI_DATA.py:132
 msgid "The requested file, %s, has been saved in %s."
-msgstr ""
-"Затребованный файл %s был сохранен в %s."
-
-
-
+msgstr "Затребованный файл %s был сохранен в %s."

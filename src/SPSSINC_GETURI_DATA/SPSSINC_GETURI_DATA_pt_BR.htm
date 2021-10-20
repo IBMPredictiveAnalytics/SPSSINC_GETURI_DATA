@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+<title>Abrir um arquivo de dados a partir de um endereço na Internet</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Abrir um arquivo de dados a partir de um endereço na Internet</h1>
+Use esta caixa de diálogo para abrir um arquivo de dados no formato SPSS, Excel, SAS ou Stata a partir da web.
+O arquivo será transferido por download para seu computador e, em seguida, aberto.  O diálogo também pode ser usado para fazer download e salvar arquivos de qualquer outro tipo, mas esses não serão abertos.
+
+<p><span class="runinhead">Localização na web e nome do arquivo de dados.</span> 
+Insira o endereço na Internet completo de um arquivo para abrir, incluindo o protocolo, como http:// ou ftp://.
+O arquivo será transferido por download para um diretório temporário em seu computador e aberto.  Salve-o em uma localização permanente se planeja usá-lo novamente.
+<p><span class="runinhead">Tipo de arquivo.</span>
+Escolha SPSS, Excel, SAS ou Stata como o tipo de arquivo.  As versões desses arquivos que são suportados correspondem às versões que você pode abrir a partir da caixa de diálogo padrão Abrir arquivo.  Escolha Outro para apenas fazer download e salvar um arquivo.
+<p><span class="runinhead">Salvar pasta.</span> Se você selecionar Outro como o tipo de arquivo, especifique uma pasta existente onde o arquivo deve ser armazenado.  O nome do arquivo será obtido do uri de download.</p>
+<p class="bullet">Um arquivo existente pode ou não pode ser sobrescrito, dependendo do sistema operacional e das permissões do arquivo.  Se ocorrer uma colisão de nomes de arquivo, o arquivo pode ser deixado na pasta de destino com um nome temporário.</p>
+<p><span class="runinhead">Nome do conjunto de dados a designar.</span>
+Opcionalmente, designe um nome do conjunto de dados do SPSS para o arquivo que está sendo aberto.  Este não é um nome de arquivo, mas um nome usado para gerenciar arquivos de dados quando mais de um pode ser aberto.
+<p><span class="runinhead">Opções para arquivos do Excel.</span>
+Estas opções se aplicam apenas aos arquivos do Excel e são ignoradas se outro tipo de arquivo for usado.  Elas correspondem às opções disponíveis do diálogo padrão Abrir arquivo.
+<p><span class="runinhead">Número da planilha para ler.</span>
+Se o arquivo tiver mais de uma planilha, especifique qual ler pelo número ou nome.  Por padrão, a planilha número 1 é lida.  Não especifique ambos um nome e um número.
+<p><span class="runinhead">Nome da planilha para ler.</span>
+É possível especificar a planilha para ler inserindo o nome aqui.  Se ambos um nome e um número forem fornecidos,
+o nome terá prioridade.
+<p><span class="runinhead">Intervalo de células.</span> Por padrão, todas as células são lidas.  É possível especificar um intervalo de células para limitar a área lida.
+<p><span class="runinhead">Ler nomes de variáveis a partir da primeira linha.</span>
+Marque esta caixa para obter os nomes de variáveis para o conjunto de dados do SPSS da primeira linha do intervalo.
+Nomes que são inválidos, como nomes do SPSS, serão automaticamente substituídos.
+<p><span class="runinhead">Largura máxima da sequência de caracteres assumida.</span>
+Por padrão, as sequências de caracteres têm uma largura de 32767 designada.  É possível especificar um número menor aqui.
+
+<p><span class="runinhead">Opções para arquivos SAS.</span>
+É possível inserir o nome de um conjunto de dados SAS específico dentro do arquivo para ler.
+
+<h2>Recursos adicionais</h2>
+Execute o comando<br>
+SPSSINC GETURI DATA /HELP.<br>
+para exibir a descrição toda da sintaxe.
+<h2>Requisitos</h2>
+Este comando requer o Python Essentials.
+É possível fazer download dele por meio do website SPSS Community em www.ibm.com/developerworks/spssdevcentral ou de seus materiais de instalação.  O Essentials é instalado automaticamente com o Statistics 22 ou posterior.</p>
+  <p style="font-size:80%;">
+  Copyright IBM Corp. 2013</p>
+</body>
+</html>

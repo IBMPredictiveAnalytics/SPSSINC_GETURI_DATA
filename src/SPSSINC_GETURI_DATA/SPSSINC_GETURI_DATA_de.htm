@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+<title>Datendatei über eine Internetadresse öffnen</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Datendatei über eine Internetadresse öffnen</h1>
+Über dieses Dialogfeld kann eine Datendatei im SPSS-, Excel-, SAS- oder Stata-Format über das Web geöffnet werden.
+Die Datei wird auf Ihren Computer heruntergeladen und anschließend geöffnet.  Darüber hinaus können über das Dialogfeld Dateien jeglichen anderen Typs heruntergeladen und gespeichert werden; diese werden jedoch nicht geöffnet.
+
+<p><span class="runinhead">Webstandort und Name der Datendatei.</span> 
+Geben Sie die vollständige Internetadresse der zu öffnenden Datei einschließlich des Protokolls (z.&nbsp;B. http:// oder ftp://) ein.
+Die Datei wird in ein temporäres Verzeichnis auf Ihrem Computer heruntergeladen und geöffnet.  Wenn Sie die Datei ein weiteres Mal verwenden wollen, speichern Sie sie an einem permanenten Speicherort.
+<p><span class="runinhead">Dateityp.</span>
+Wählen Sie SPSS, Excel, SAS oder Stata als Dateityp aus.  Für diese Dateien werden dieselben Versionen unterstützt,
+die auch über das Standarddialogfeld zum Öffnen von Dateien geöffnet werden können.  Wählen
+Sie 'Andere' aus, wenn eine Datei nur heruntergeladen und gespeichert werden soll.
+<p><span class="runinhead">Ordner speichern.</span> Wenn Sie 'Andere' als Dateityp auswählen,
+geben Sie einen vorhandenen Ordner an, in dem die Datei gespeichert werden soll.  Der Dateiname
+wird dem Download-URI entnommen.</p>
+<p class="bullet">Ob eine bereits vorhandene Datei überschrieben wird,
+hängt von den Betriebssystem- und Dateiberechtigungen ab.  Wenn ein Dateinamenskonflikt
+auftritt, wird die Datei möglicherweise im Zielordner unter einem temporären Namen abgelegt.</p>
+<p><span class="runinhead">Zuzuweisender Datasetname.</span>
+Optional können Sie der Datei, die geöffnet wird, einen SPSS-Datasetnamen zuweisen.  Dabei handelt es sich nicht um einen Dateinamen, sondern um einen Namen,
+der zur Verwaltung von Datendateien verwendet wird, wenn mehrere geöffnet sind.
+<p><span class="runinhead">Optionen für Excel-Dateien.</span>
+Diese Optionen sind nur bei Excel-Dateien anwendbar und werden ignoriert, wenn ein anderer Dateityp verwendet wird.  Sie entsprechen den Optionen, die über das
+Standarddialogfeld zum Öffnen von Dateien verfügbar sind.
+<p><span class="runinhead">Nummer des zu lesenden Arbeitsblatts.</span>
+Wenn die Datei mehr als ein Arbeitsblatt hat, geben Sie die Nummer oder den Namen des Arbeitsblatts an, das gelesen werden soll.  Standardmäßig wird das Arbeitsblatt
+mit der Nummer 1 gelesen.  Geben Sie nicht beides, Namen und Nummer, gleichzeitig an.
+<p><span class="runinhead">Name des zu lesenden Arbeitsblatts.</span>
+Hier können Sie den Namen des Arbeitsblatts eingeben, das gelesen werden soll.  Werden Name und Nummer angegeben,
+hat der Name Priorität.
+<p><span class="runinhead">Zellenbereich.</span> Standardmäßig werden alle Zellen gelesen.  Durch Angabe
+eines Zellenbereichs kann der zu lesende Bereich begrenzt werden.
+<p><span class="runinhead">Variablennamen aus erster Zeile lesen.</span>
+Wählen Sie dieses Feld aus, um die Variablennamen für das SPSS-Dataset aus der ersten Zeile des Bereichs zu verwenden.
+Namen, die keine gültigen SPSS-Namen sind, werden automatisch ersetzt.
+<p><span class="runinhead">Angenommene maximale Zeichenfolgenbreite.</span>
+Zeichenfolgen wird standardmäßig eine Breite von 32767 zugewiesen.  Hier kann ein kleinerer Wert angegeben werden.
+
+<p><span class="runinhead">Optionen für SAS-Dateien.</span>
+Hier kann der Name eines bestimmten SAS-Datasets in der zu lesenden Datei eingegeben werden.
+
+<h2>Weitere Funktionen</h2>
+Führen Sie den folgenden Befehl aus:<br>
+SPSSINC GETURI DATA /HELP.<br>
+Sie zeigen damit die vollständige Syntaxbeschreibung an.
+<h2>Anforderungen</h2>
+Für diesen Befehl ist Python Essentials erforderlich.
+Sie können Python Essentials von der SPSS Community-Website (www.ibm.com/developerworks/spssdevcentral)
+oder über Ihr Installationsmaterial herunterladen. Ab Statistics 22 wird Python Essentials automatisch installiert.</p>
+  <p style="font-size:80%;">
+  Copyright IBM Corp. 2013</p>
+</body>
+</html>

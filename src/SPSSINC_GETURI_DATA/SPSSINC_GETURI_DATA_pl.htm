@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Otwórz plik danych z adresu internetowego</title>
+<STYLE TYPE="text/css"> 
+<!-- 
+
+H1 {font-weight:bold; color:#006699; font-size:125%; }
+H2 {font-weight:bold; color:#006699; font-size:110%; }
+BODY {font-size:80%; }
+TABLE {font-size:100%;}
+
+/* paragraph tags */
+.step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+.step-glyph {  }
+.menuselection {margin-left:10px}
+.bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+.codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px; }
+
+/* inline tags */
+.code {}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+.screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+.name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+.runinhead {font-weight: bold} 
+.superscript {vertical-align:super; font-size:80%}
+.subscript {vertical-align:sub; font-size:80%}
+.symbol {}
+
+--> 
+</STYLE>
+</head>
+<body>
+<h1>Otwórz plik danych z adresu internetowego</h1>
+Za pomocą tego okna dialogowego można otwierać pliki danych w formacie SPSS, Excel, SAS lub Stata pobrane z Internetu.
+Plik zostanie pobrany na komputer i otwarty.  Za pomocą tego okna dialogowego można pobierać i zapisywać pliki dowolnego, innego typu, ale nie zostaną one otwarte.
+
+<p><span class="runinhead">Lokalizacja internetowa i nazwa pliku danych.</span> 
+Wprowadź pełny adres internetowy pliku, aby go otworzyć. Nie można pominąć protokołu, np. http:// ani ftp://.
+Plik zostanie pobrany do katalogu tymczasowego na komputerze i otwarty.  Zapisz plik do żądanego położenia, jeśli planujesz go użyć ponownie.
+<p><span class="runinhead">Typ pliku.</span>
+Jako typ pliku wybierz SPSS, Excel, SAS lub Stata.  Obsługiwane wersje plików odpowiadają wersjom, które można otworzyć z poziomu standardowego okna dialogowego otwierania pliku.  Wybierz pozycję Inne, aby tylko pobrać i zapisać plik.
+<p><span class="runinhead">Folder zapisu.</span> W przypadku wybrania opcji Inne jako typu pliku określ istniejący folder, w którym zostanie zapisany plik.  Nazwa pliku zostanie określona na podstawie identyfikatora URI pobierania.</p>
+<p class="bullet">Istniejący plik może zostać zastąpiony w zależności od systemu operacyjnego i uprawnień dotyczących pliku.  W przypadku konfliktu dotyczącego nazwy pliku może on pozostać w folderze docelowym z zachowaniem nazwy tymczasowej.</p>
+<p><span class="runinhead">Nazwa zbioru danych do przypisania.</span>
+Opcjonalnie przypisz nazwę zbioru danych SPSS do otwieranego pliku.  Nie jest to nazwa pliku, ale nazwa używana do zarządzania plikami danych, gdy otwartych może być wiele plików.
+<p><span class="runinhead">Opcje dotyczące plików Excel.</span>
+Te opcje są stosowane tylko w przypadku plików Excel i są ignorowane w przypadku użycia plików innego typu.  Odnoszą się one do opcji dostępnych z poziomu standardowego okna dialogowego otwierania pliku.
+<p><span class="runinhead">Numer arkusza do odczytania.</span>
+Jeśli plik zawiera więcej niż jeden arkusz, dany arkusz do odczytu należy określić za pomocą liczby lub nazwy.  Domyślnie odczytywany jest arkusz o numerze 1.  Nie należy jednocześnie określać nazwy i liczby.
+<p><span class="runinhead">Nazwa arkusza do odczytania.</span>
+Wprowadzenie nazwy w tym obszarze pozwala określić arkusz przeznaczony do odczytania.  Jeśli określono jednocześnie nazwę i liczbę,
+wyższy priorytet ma nazwa.
+<p><span class="runinhead">Przedział komórek.</span> Domyślnie odczytywane są wszystkie komórki.  W celu ograniczenia obszaru przeznaczonego do odczytu można określić przedział komórek.
+<p><span class="runinhead">Czytaj nazwy zmiennych z pierwszego wiersza.</span>
+Zaznaczenie tego pola wyboru pozwala na pobranie nazw zmiennych dla zbioru danych SPSS z pierwszego wiersza przedziału.
+Nazwy nieprawidłowe w kontekście SPSS zostaną automatycznie zastąpione.
+<p><span class="runinhead">Przyjmowana szerokość maksymalna łańcucha.</span>
+Domyślną przypisywaną szerokością łańcucha jest 32767.  Istnieje możliwość określenia mniejszej liczby.
+
+<p><span class="runinhead">Opcje dotyczące plików SAS.</span>
+Można wprowadzić nazwę określonego zbioru danych SAS w ramach pliku przeznaczonego do odczytania.
+
+<h2>Funkcje dodatkowe</h2>
+Uruchom komendę<br>
+SPSSINC GETURI DATA /HELP.<br>
+w celu wyświetlenia opisu całej składni.
+<h2>Wymagania</h2>
+Ta komenda wymaga dodatku Python Essentials.
+Dodatek można pobrać za pomocą witryny SPSS Community dostępnej pod adresem www.ibm.com/developerworks/spssdevcentral lub z materiałów instalacyjnych.  Rozwiązanie Essentials jest automatycznie instalowane w przypadku wersji Statistics 22 lub nowszej.</p>
+  <p style="font-size:80%;">
+  Copyright IBM Corp. 2013</p>
+</body>
+</html>
