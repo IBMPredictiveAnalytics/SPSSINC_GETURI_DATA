@@ -1,4 +1,5 @@
 Name: SPSSINC GETURI DATA
+Display-Name: Open Dataset from URL
 Dialog-Specs: SPSSINC_GETURI_DATA.spd
 Command-Specs: SPSSINC_GETURI_DATA.xml
 Code-Files: SPSSINC_GETURI_DATA.py
