@@ -16,6 +16,7 @@ __version__=  '1.2.0'
 
 # history
 # 27-may-2014 support long uris
+# 05-nov-2023 add https support for Mac :-(
 
 helptext = """SPSSINC GETURI DATA URI="uri including filename" "..."
 FILETYPE={SPSS* | XLS | SAS | STATA | OTHER}
@@ -64,7 +65,32 @@ There are no options for SPSS or Stata files.
 """
 import spss, spssaux
 from extension import Template, Syntax, processcmd
-import urllib.request, urllib.parse, urllib.error, os, shutil
+import urllib.request, urllib.parse, urllib.error, os, shutil, sys
+
+def fixMacCert():
+    """Set ssl certificate path on Mac"""
+    
+    # Mac Python does not automatically set up the ssl certificates, which
+    # causes https use to fail.  This function handles that on the assumption 
+    # which requires the certifi module from PyPi
+    
+    if sys.platform != "darwin" or "SSL_CERT_FILE" in os.environ:
+        return
+    try:
+        import certifi
+    except:
+        try:
+            spss.Submit("STATS PACKAGE INSTALL PYTHON=certifi.")
+            import certifi
+        except:
+            raise SystemError("""Cannot install certifi package for Mac https support.
+            If the STATS PACKAGE INSTALL extension is not already installed, please
+            install it and try the command again.""")
+    cert_path = certifi.where()
+    os.environ["SSL_CERT_FILE"] = cert_path
+    os.environ["REQUESTS_CA_BUNDLE"] = cert_path
+    
+fixMacCert()
         
 def geturidata(uri, filetype="sav", save=None, dataset=None, assumedstrwidth=32767, sheetname=None,
     sheetnumber=None, cellrange=None, readnames="ON", dset=None):

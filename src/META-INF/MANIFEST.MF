@@ -1,5 +1,4 @@
 Name: SPSSINC GETURI DATA
-Display-Name: Open Dataset from URL
 Dialog-Specs: SPSSINC_GETURI_DATA.spd
 Command-Specs: SPSSINC_GETURI_DATA.xml
 Code-Files: SPSSINC_GETURI_DATA.py
@@ -9,7 +8,7 @@ Description: This command takes a URL as input and downloads and opens
   a data file.  It can be used to download and save files of other typ
  es, but these will not be opened.
 Author: JKP, IBM SPSS
-Version: 2.0.0
+Version: 2.0.1
 Product-Version: 24
 Product-Version-Maximum: 99
 Categories: data, utilities
