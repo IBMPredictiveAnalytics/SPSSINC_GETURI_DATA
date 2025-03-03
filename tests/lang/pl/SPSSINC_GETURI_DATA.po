@@ -1,0 +1,40 @@
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-10-20 00:58-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Globalization Pipeline\n"
+
+msgid "An output file must be specified for type other."
+msgstr "Należy określić inny typ pliku wyjściowego."
+
+msgid "The save location specified does not exist or is not a directory"
+msgstr "Określona lokalizacja zapisu nie istnieje lub nie jest katalogiem"
+
+msgid "The specified uri is not valid: %s"
+msgstr "Określono nieprawidłowy identyfikator URI: %s"
+
+msgid "Could not write to the specified destination: %s"
+msgstr "W określonym położeniu docelowym nie można wykonać zapisu: %s"
+
+msgid ""
+"Cannot assign the original name.\n        The downloaded file is in %s and is "
+"named %s"
+msgstr ""
+"Nie można przypisać nazwy oryginalnej.\nPobrany plik znajduje się w "
+"lokalizacji: %s, a jego nazwą jest: %s"
+
+msgid "The requested file, %s, has been saved in %s."
+msgstr "Żądany plik, %s, zapisano w: %s."
